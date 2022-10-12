@@ -35,6 +35,7 @@ while(count<25) {
 	pal.turn(-40);
 			
 			   // DRAW FLAME     Move the robot the distance in the variable flameSize
+	pal.setPenColor(Color.yellow);
 	pal.move(flameSize);
 			
 				//               Turn the robot 170 degrees
@@ -42,6 +43,7 @@ while(count<25) {
 			
 				//               Move the robot the distance in the variable flameSize (again)
 			pal.move(flameSize);
+			pal.setPenColor(Color.black);
 			   // TURN RIGHT     Turn the robot 64 degrees to the right
 			pal.turn(64);
 			
@@ -58,6 +60,9 @@ while(count<25) {
 		
 		// COLOR  Change the Robot's pen color so that the flame is a different color to the rest of the star.
 		//        Run the program again. Check the second picture in the recipe.
+pal.setPenColor(Color.yellow);
+
+
 
 		// LOOP   When you have one arm looking right, change your loop to repeat 25 times and run the program.
 		
