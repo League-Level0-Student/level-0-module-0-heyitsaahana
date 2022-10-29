@@ -14,18 +14,23 @@ public class DragonFight {
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
+	
 		
 			// playerHealth to store your health - set it equal to 100
+	int playerHealth=100;
+	
 	
 			// dragonHealth to store the dragon's health - set it equal to 100
+	int dragonHealth=100;
 
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
 		
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
-	
+	int playerAttack=0;
 			// dragonAttack to store the damage the dragon's attack will do - set it equal
 			// to 0 for now.
+	int dragonAttack=0;
 
 		
 		//  This while statement will cause the game attack code to repeat
@@ -35,21 +40,32 @@ public class DragonFight {
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
+			String attack  = JOptionPane.showInputDialog("Would you like to attack the dragon with a kick or with a yell?");
+			
 	
 				// 4. If they typed in "yell":
+			if(attack.equals("yell")) {
+				playerAttack=ran.nextInt(10);
+			}
 	
 					  // -- Find a random number between 0 and 10 and store it in playerAttack. Use
 					  // ran.nextInt(10)
 			
 				// 5. If they typed in "kick":
+			if(attack.equals("Kick")) {
+				playerAttack=ran.nextInt(25);
+			}
 	
-					  // -- Find a random number between 0 and 25 and store it in playerAttack.
+					  // -- Find a random number between 0 and 25 and store it in playerAttack
+			
 		
 				// 6. Subtract the player attack value from the dragon's health
+			dragonHealth=dragonHealth-playerAttack;
 
 			// THE DRAGON RETALIATES
 
 				// 7. Find a random number between 0 and 35 and store it in dragonAttack
+			
 	
 				// 8. Subtract the dragon attack value from the player's health
 
